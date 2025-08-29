@@ -40,10 +40,10 @@ if ( "${CMAKE_CXX_COMPILER_ID}" MATCHES "Clang")
   set(using_clang_compiler TRUE)
 endif ()
 
-# Add compiler flags if we are 
+# Add compiler flags if we are
 if (MICROSOFT_GENERATE_COVERAGE)
     message(STATUS "Generating coverage data")
-    
+
     if (using_clang_compiler)
       # Generating coverage output
       set(CMAKE_CXX_FLAGS_DEBUG "-g -fprofile-instr-generate -fcoverage-mapping -O0")
@@ -83,7 +83,7 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Werror -Wno-documentation-unknown-comma
 include(${MICROSOFT_ROOT_PASSES_DIR}/cmake/Testing.cmake)
 include(${MICROSOFT_ROOT_PASSES_DIR}/cmake/Library.cmake)
 
-# We export the compile commands which are needed by clang-tidy 
+# We export the compile commands which are needed by clang-tidy
 # to run the static analysis
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
@@ -113,7 +113,7 @@ include_directories(${CMAKE_SOURCE_DIR})
 llvm_map_components_to_libnames(llvm_libs support core irreader passes orcjit mcjit x86asmparser x86codegen x86desc x86disassembler x86info interpreter objcarcopts aarch64asmparser aarch64codegen aarch64desc aarch64disassembler aarch64info)
 
 # Future placeholder for adding LLVM from source in CMake.
-add_custom_target(llvm) 
+add_custom_target(llvm)
 
 # Adding the libraries
 add_subdirectory(qir/qat)
