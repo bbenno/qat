@@ -36,7 +36,7 @@ endif()
 
 # Helper variable to determine if we are using Clang compiler
 set(using_clang_compiler FALSE)
-if ( "${CMAKE_CXX_COMPILER_ID}" STREQUAL "AppleClang" OR "${CMAKE_CXX_COMPILER_ID}" STREQUAL "Clang")
+if ( "${CMAKE_CXX_COMPILER_ID}" MATCHES "Clang")
   set(using_clang_compiler TRUE)
 endif ()
 
