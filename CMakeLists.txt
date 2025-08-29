@@ -5,7 +5,7 @@ if(NOT CMAKE_BUILD_TYPE)
   set(CMAKE_BUILD_TYPE "Release")
 endif()
 
-option(MICROSOFT_ENABLE_TESTS               "Enable test targets"   ON)
+option(MICROSOFT_ENABLE_TESTS               "Enable test targets"   OFF)
 option(MICROSOFT_ENABLE_DYNAMIC_LOADING     "Use dynamic loading"   ON)
 option(MICROSOFT_GENERATE_COVERAGE          "Generate coverage"     OFF)
 
