@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.4.3)
+cmake_minimum_required(VERSION 3.10.0)
 
 project(QirPasses)
 if(NOT CMAKE_BUILD_TYPE)

@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.4.3)
+cmake_minimum_required(VERSION 3.10.0)
 
 microsoft_add_library(DeferMeasurementPass Logging)
 microsoft_add_library_tests(DeferMeasurementPass  Rules TargetQisMappingPass AllocationManager Commandline AdaptorFactory Validator ValidationPass  Logging GroupingPass FunctionReplacementPass)
